@@ -5,8 +5,8 @@ local keyboard = require "keyboard_events"
 local lp = love.physics
 local lg = love.graphics
 --Declare variables
-local x        = keyboard.x
-local y        = keyboard.y
+local x        = 0
+local y        = 0
 local floor	   = math.floor
 
 function love.load()
@@ -15,13 +15,15 @@ function love.load()
 end
 
 function love.update(dt)
+	x = keyboard.x
+	y = keyboard.y
 	map:update()
 end
 
 function love.draw()
 	local scale   = 1.25
 	local screenW = lg.getWidth()/scale
-	local screenH = lh.getHeight()/scale
+	local screenH = lg.getHeight()/scale
 	
 	--Declare translation values
 	local tx, ty = -(floor(x-screenW/2)), -(floor(y-screenH/2))
