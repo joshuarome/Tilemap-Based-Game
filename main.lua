@@ -1,6 +1,6 @@
 --Require modules
 local sti      = require "sti"
-local keyboard = require "keyboard_events.lua"
+local keyboard = require "keyboard_events"
 --Declare optimisation variables
 local lp = love.physics
 local lg = love.graphics
