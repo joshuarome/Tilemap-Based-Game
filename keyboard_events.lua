@@ -1,15 +1,15 @@
 local keybindings        = {}
 local dt		         = 1/60
 --Global Variables
-local keybindings.speed  = 512
-local keybindings.x 	 = 0
-local keybindings.y 	 = 0
-local keybindings.events = {
+keybindings.speed  = 512
+keybindings.x 	 = 0
+keybindings.y 	 = 0
+keybindings.events = {
 
-	w = function() keybindings.y = keybindings.y - speed*dt end,
-	s = function() keybindings.y = keybindings.y + speed*dt end,
-	a = function() keybindings.x = keybindings.x - speed*dt end,
-	d = function() keybindings.x = keybindings.x + speed*dt end
+	w = function() keybindings.y = keybindings.y - keybindings.speed*dt end,
+	s = function() keybindings.y = keybindings.y + keybindings.speed*dt end,
+	a = function() keybindings.x = keybindings.x - keybindings.speed*dt end,
+	d = function() keybindings.x = keybindings.x + keybindings.speed*dt end
 }
 
 function love.keypressed(key)
